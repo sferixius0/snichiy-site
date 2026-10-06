@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snichiy BOT — боты и сайты под ключ</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1a1a1a; line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* ХЕДЕР */
+header { background: #fff; border-bottom: 1px solid #eee; padding: 20px 0; position: sticky; top: 0; z-index: 100; }
+.header-inner { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 24px; font-weight: 700; color: #2563eb; }
+.logo span { color: #1a1a1a; }
+.btn-tg { background: #2563eb; color: #fff; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.2s; }
+.btn-tg:hover { background: #1d4ed8; }
+
+/* HERO */
+.hero { padding: 100px 0; background: linear-gradient(135deg, #f0f7ff 0%, #fff 100%); }
+.hero h1 { font-size: 48px; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+.hero h1 span { color: #2563eb; }
+.hero p { font-size: 20px; color: #555; margin-bottom: 30px; max-width: 600px; }
+.btn-primary { display: inline-block; background: #2563eb; color: #fff; padding: 16px 40px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 18px; transition: 0.2s; }
+.btn-primary:hover { background: #1d4ed8; transform: translateY(-2px); }
+
+/* СЕКЦИИ */
+section { padding: 80px 0; }
+h2 { font-size: 36px; font-weight: 800; text-align: center; margin-bottom: 50px; }
+h2 span { color: #2563eb; }
+
+/* ЧТО ДЕЛАЮ */
+.services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.service { background: #f9fafb; padding: 30px; border-radius: 16px; }
+.service h3 { font-size: 22px; margin-bottom: 15px; }
+.service ul { list-style: none; }
+.service li { padding: 6px 0; color: #555; }
+.service li::before { content: "✓ "; color: #2563eb; font-weight: 700; }
+
+/* КАК РАБОТАЮ */
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.step { text-align: center; padding: 20px; }
+.step-num { display: inline-block; width: 50px; height: 50px; line-height: 50px; background: #2563eb; color: #fff; border-radius: 50%; font-size: 24px; font-weight: 700; margin-bottom: 15px; }
+.step h4 { margin-bottom: 10px; }
+.step p { color: #666; font-size: 14px; }
+
+/* ЦЕНЫ */
+.prices { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; }
+.price-card { background: #fff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 30px; text-align: center; transition: 0.2s; }
+.price-card:hover { border-color: #2563eb; transform: translateY(-4px); }
+.price-card h3 { font-size: 20px; margin-bottom: 15px; }
+.price-tag { font-size: 32px; font-weight: 800; color: #2563eb; margin: 15px 0; }
+.price-card ul { list-style: none; text-align: left; margin: 20px 0; }
+.price-card li { padding: 5px 0; color: #555; font-size: 14px; }
+.price-card li::before { content: "✓ "; color: #2563eb; }
+
+/* ПРЕИМУЩЕСТВА */
+.advantages { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.adv { text-align: center; padding: 20px; }
+.adv-icon { font-size: 40px; margin-bottom: 15px; }
+.adv h4 { margin-bottom: 10px; }
+.adv p { color: #666; font-size: 14px; }
+
+/* FAQ */
+.faq-item { background: #f9fafb; padding: 20px; border-radius: 12px; margin-bottom: 15px; }
+.faq-item h4 { margin-bottom: 10px; color: #2563eb; }
+.faq-item p { color: #555; }
+
+/* КОНТАКТЫ */
+.contacts { background: #2563eb; color: #fff; text-align: center; }
+.contacts h2 { color: #fff; }
+.contacts h2 span { color: #fff; }
+.contacts .btn-primary { background: #fff; color: #2563eb; }
+
+/* ФУТЕР */
+footer { background: #1a1a1a; color: #888; text-align: center; padding: 30px 0; font-size: 14px; }
+
+/* МОБИЛЬНАЯ АДАПТАЦИЯ */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 32px; }
+  .services, .steps, .prices { grid-template-columns: 1fr; }
+  h2 { font-size: 28px; }
+  .header-inner { flex-direction: column; gap: 15px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ХЕДЕР -->
+<header>
+  <div class="container header-inner">
+    <div class="logo">Snichiy <span>BOT</span></div>
+    <a href="https://t.me/SnichiyShop" class="btn-tg">Написать в Telegram</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Боты и сайты <span>под ключ</span></h1>
+    <p>Telegram-боты, сайты, автоворонки. Без подписок, без шаблонов. Всё твоё навсегда.</p>
+    <a href="https://t.me/SnichiyShop" class="btn-primary">Начать бесплатно</a>
+  </div>
+</section>
+
+<!-- ЧТО ДЕЛАЮ -->
+<section>
+  <div class="container">
+    <h2>Что я <span>делаю</span></h2>
+    <div class="services">
+      <div class="service">
+        <h3>🤖 Telegram-боты</h3>
+        <ul>
+          <li>Магазины (каталог, корзина)</li>
+          <li>Авторассылки по группам</li>
+          <li>Боты для барахолок</li>
+          <li>Автоматизация</li>
+        </ul>
+      </div>
+      <div class="service">
+        <h3>🌐 Сайты</h3>
+        <ul>
+          <li>Визитки</li>
+          <li>Интернет-магазины</li>
+          <li>Лендинги под рекламу</li>
+          <li>Связка с ботом</li>
+        </ul>
+      </div>
+      <div class="service">
+        <h3>⚙️ Автоматизация</h3>
+        <ul>
+          <li>ИИ-автоответчики</li>
+          <li>Парсинг</li>
+          <li>Интеграции с API</li>
+          <li>Скрипты под задачи</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- КАК РАБОТАЮ -->
+<section style="background:#f9fafb;">
+  <div class="container">
+    <h2>Как я <span>работаю</span></h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Пишешь в Telegram</h4>
+        <p>Рассказываешь задачу</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Согласуем ТЗ</h4>
+        <p>Что делать, сроки, цена</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Предоплата 50%</h4>
+        <p>Начинаю работу</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Сдаю проект</h4>
+        <p>Тестируешь, правим, получаешь</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ЦЕНЫ -->
+<section>
+  <div class="container">
+    <h2>Цены</h2>
+    <div class="prices">
+      <div class="price-card">
+        <h3>Бот-магазин</h3>
+        <div class="price-tag">75 BYN</div>
+        <ul>
+          <li>Каталог, корзина</li>
+          <li>Приём заказов</li>
+          <li>Уведомления тебе</li>
+          <li>Срок: 3-5 дней</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <h3>Авторассылка</h3>
+        <div class="price-tag">50 BYN</div>
+        <ul>
+          <li>Рассылка по группам</li>
+          <li>Ротация аккаунтов</li>
+          <li>Шаблоны сообщений</li>
+          <li>Срок: 2-3 дня</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <h3>Сайт-визитка</h3>
+        <div class="price-tag">от 50 BYN</div>
+        <ul>
+          <li>Одностраничник</li>
+          <li>Адаптивный дизайн</li>
+          <li>Кнопка "Написать"</li>
+          <li>Срок: 2-3 дня</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <h3>Сайт-магазин</h3>
+        <div class="price-tag">от 150 BYN</div>
+        <ul>
+          <li>Каталог, корзина</li>
+          <li>Приём заказов</li>
+          <li>Связка с ботом</li>
+          <li>Срок: 5-7 дней</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <h3>Комплекс</h3>
+        <div class="price-tag">от 250 BYN</div>
+        <ul>
+          <li>Бот + сайт + рассылка</li>
+          <li>Всё вместе</li>
+          <li>Срок: 7-10 дней</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ПРЕИМУЩЕСТВА -->
+<section style="background:#f9fafb;">
+  <div class="container">
+    <h2>Почему <span>я</span></h2>
+    <div class="advantages">
+      <div class="adv">
+        <div class="adv-icon">🚀</div>
+        <h4>Без подписок</h4>
+        <p>Платишь один раз, всё твоё</p>
+      </div>
+      <div class="adv">
+        <div class="adv-icon">⚡</div>
+        <h4>Быстро</h4>
+        <p>Сроки от 2 дней</p>
+      </div>
+      <div class="adv">
+        <div class="adv-icon">💎</div>
+        <h4>Без шаблонов</h4>
+        <p>Делаю под твою задачу</p>
+      </div>
+      <div class="adv">
+        <div class="adv-icon">🛠</div>
+        <h4>Поддержка</h4>
+        <p>Отвечаю после сдачи</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container" style="max-width:800px;">
+    <h2>Частые <span>вопросы</span></h2>
+    <div class="faq-item">
+      <h4>Сколько стоит?</h4>
+      <p>От 50 BYN. Точная цена — после ТЗ.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Как оплатить?</h4>
+      <p>50% предоплата, 50% после сдачи. Перевод на карту или крипту.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Сколько ждать?</h4>
+      <p>От 2 до 10 дней в зависимости от задачи.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Что если не понравится?</h4>
+      <p>Вношу правки бесплатно, пока не будет так, как надо.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Работаешь с другими городами?</h4>
+      <p>Да, работаю удалённо по всей Беларуси и СНГ.</p>
+    </div>
+  </div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<section class="contacts">
+  <div class="container">
+    <h2>Свяжись <span>со мной</span></h2>
+    <p style="margin:20px 0; font-size:18px;">Telegram: @SnichiyShop</p>
+    <a href="https://t.me/SnichiyShop" class="btn-primary">Написать в Telegram</a>
+  </div>
+</section>
+
+<!-- ФУТЕР -->
+<footer>
+  <div class="container">
+    © 2026 Snichiy BOT. Боты и сайты под ключ.
+  </div>
+</footer>
+
+</body>
+</html>
